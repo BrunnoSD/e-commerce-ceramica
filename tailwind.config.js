@@ -23,7 +23,7 @@ export default {
       },
       height: {
         'meio': '65vh',
-        'pfooter': '85vh',
+        'pfooter': '100vh',
         'footer': '600px',
         'about': '130vh'
       },

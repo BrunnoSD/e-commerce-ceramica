@@ -1,11 +1,11 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import MenuMobile from "../MenuMobile/MenuMobile.jsx";
 import Hamburger from "hamburger-react";
-import useCarrinhoStore from "../Funcoes/Buy.jsx";
+import { CounterContext } from "../Funcoes/Buy.jsx";
 
 function CompHeader() {
   const [isOpen, setIsOpen] = useState(false);
-  const adCarrinho = useCarrinhoStore((state) => state.adCarrinho)
+  const {adCarrinho} = useContext(CounterContext)
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -44,7 +44,7 @@ function CompHeader() {
               </text>
       </svg>
           </section>
-          <span className="ml-12 md:mx-10 text-lg md:text-2xl 2xl:text-2xl 3xl:text-3xl cursor-pointer">
+          <span className="ml-14 md:mx-10 text-base md:text-2xl 2xl:text-2xl 3xl:text-3xl cursor-pointer">
             ESPAÇO - CERÂMICA
           </span>
           <nav className="max-md:hidden">

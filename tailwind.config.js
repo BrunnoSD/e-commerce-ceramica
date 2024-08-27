@@ -25,7 +25,7 @@ export default {
         'meio': '65vh',
         'pfooter': '100vh',
         'footer': '600px',
-        'about': '130vh'
+        'about': '160vh'
       },
       scale: {
         '102': '1.02'

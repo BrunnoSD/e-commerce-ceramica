@@ -1,8 +1,19 @@
-import { create } from 'zustand';
+import React, { createContext, useState } from 'react';
 
-const useCarrinhoStore = create((set) => ({
-  adCarrinho: 0,
-  adicionarCarrinho: () => set((state) => ({ adCarrinho: state.adCarrinho + 1 })),
-}));
+const CounterContext = createContext();
 
-export default useCarrinhoStore;
+const CounterProvider = ({ children }) => {
+  const [adCarrinho, setAdCarrinho] = useState(0);
+
+  const contador = () => {
+    setAdCarrinho(adCarrinho + 1);
+  };
+
+  return (
+    <CounterContext.Provider value={{ adCarrinho, contador }}>
+      {children}
+    </CounterContext.Provider>
+  );
+};
+
+export { CounterProvider, CounterContext };

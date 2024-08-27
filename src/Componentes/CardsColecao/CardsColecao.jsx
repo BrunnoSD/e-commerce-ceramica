@@ -7,9 +7,11 @@ import sextoimg from "../../assets/Colecao/ssitem.png";
 import setimoimg from "../../assets/Colecao/sssitem.png";
 import oitavoimg from "../../assets/Colecao/oitem.png";
 import nonoimg from "../../assets/Colecao/nitem.png";
-import useCarrinhoStore from "../Funcoes/Buy";
+import { CounterContext } from "../Funcoes/Buy";
+import { useContext } from "react";
 
 function CardsColecao() {
+  const {contador} = useContext(CounterContext)
   const produto = [
     {sku: "0001", imagem: umimg, nomeproduto: "Conjunto de Tigelas", preco: "R$ 85,00", situacao: "Novo"},
     {sku: "0002", imagem: doisimg, nomeproduto: "Vaso Cerâmico Preto", preco: "R$ 50,00"},
@@ -22,7 +24,6 @@ function CardsColecao() {
     {sku: "0009", imagem: nonoimg, nomeproduto: "Conjunto de Bowls Rústicos", preco: "R$ 85,00"},
   ];
 
-  const adicionarCarrinho = useCarrinhoStore((state) => state.adicionarCarrinho)
 
   return (
     <main className="grid grid-cols-1 md:grid-cols-3 gap-5 mt-5 mx-5">
@@ -39,7 +40,7 @@ function CardsColecao() {
             <p className="text-gray-400 line-through">{produtos.desconto}</p>
             <p className="text-gray-400 ml-4">{produtos.preco}</p>
           </section>
-            <button className=" w-full mt-2 mb-5 p-2 bg-black text-white lg:opacity-0 lg:group-hover:opacity-100 lg:transform lg:group-hover:translate-y-0 lg:translate-y-3 lg:transition-all lg:duration-300" onClick={adicionarCarrinho}>
+            <button className=" w-full mt-2 mb-5 p-2 bg-black text-white lg:opacity-0 lg:group-hover:opacity-100 lg:transform lg:group-hover:translate-y-0 lg:translate-y-3 lg:transition-all lg:duration-300" onClick={contador}>
               Adicionar ao carrinho
             </button>
         </section>

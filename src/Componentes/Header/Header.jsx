@@ -5,10 +5,12 @@ import {
   faQuestionCircle,
   faUserCircle,
 } from "@fortawesome/free-regular-svg-icons";
-import useCarrinhoStore from "../Funcoes/Buy";
+import { CounterContext } from "../Funcoes/Buy.jsx";
+import { useContext } from "react";
 
 function Header() {
-  const adCarrinho = useCarrinhoStore((state) => state.adCarrinho);
+  
+  const {adCarrinho} = useContext(CounterContext)
 
   return (
     <header className="bg-white">

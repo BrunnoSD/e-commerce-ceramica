@@ -16,7 +16,8 @@ export default {
       colors: {
         'principal': '#7D6C4F',
         'segundo': '#F2F1F0',
-        'hover': '#736049'
+        'hover': '#736049',
+        'btn': '#8f7f63',
       },
       inset: {
         '152': '152px'

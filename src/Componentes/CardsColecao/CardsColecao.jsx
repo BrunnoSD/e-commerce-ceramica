@@ -11,65 +11,68 @@ import { CounterContext } from "../Funcoes/Buy";
 import { useContext } from "react";
 
 function CardsColecao() {
-  const { contador } = useContext(CounterContext);
+
+  const  { adicionarAoCarrinho } = useContext(CounterContext)
+
+
   const produto = [
     {
       sku: "0001",
       imagem: umimg,
       nomeproduto: "Conjunto de Tigelas",
-      preco: "R$ 85,00",
+      preco: "R$" + " " + 85,
       situacao: "Novo",
     },
     {
       sku: "0002",
       imagem: doisimg,
       nomeproduto: "Vaso Cerâmico Preto",
-      preco: "R$ 50,00",
+      preco: "R$" + " " + 50,
     },
     {
       sku: "0003",
       imagem: tresimg,
       nomeproduto: "Vaso Cerâmico Branco",
-      preco: "R$ 40,00",
+      preco: "R$" + " " + 40,
     },
     {
       sku: "0004",
       imagem: quatroimg,
       nomeproduto: "Caneca Vulcânica",
-      preco: "R$ 25,00",
+      preco: "R$" + " " + 25,
     },
     {
       sku: "0005",
       imagem: quintoimg,
       nomeproduto: "Caneca Texturizada",
-      preco: "R$ 38,00",
+      preco: "R$" + " " + 38,
       situacao: "Mais vendido",
     },
     {
       sku: "0006",
       imagem: sextoimg,
       nomeproduto: "Caneca Serenity",
-      preco: "R$ 18,00",
+      preco: "R$" + " " + 18,
     },
     {
       sku: "0007",
       imagem: setimoimg,
       nomeproduto: "Jarro Minimalista",
-      desconto: "R$ 130,00",
-      preco: "R$ 100,00",
+      desconto: "R$" + " " + 130,
+      preco: "R$" + " " + 100,
       situacao: "Promoção",
     },
     {
       sku: "0008",
       imagem: oitavoimg,
       nomeproduto: "Conjunto de Bowls",
-      preco: "R$ 45,00",
+      preco: "R$" + " " + 45,
     },
     {
       sku: "0009",
       imagem: nonoimg,
       nomeproduto: "Conjunto de Bowls Rústicos",
-      preco: "R$ 85,00",
+      preco: "R$" + " " + 85,
     },
   ];
 
@@ -93,7 +96,7 @@ function CardsColecao() {
           </section>
           <button
             className="w-full mt-2 mb-5 p-2 bg-black text-white lg:opacity-0 lg:group-hover:opacity-100 lg:transform lg:group-hover:translate-y-0 lg:translate-y-3 lg:transition-all lg:duration-300"
-            onClick={contador}
+            onClick={() => adicionarAoCarrinho(produtos)}
           >
             Adicionar ao carrinho
           </button>

@@ -5,7 +5,9 @@ import CardsColecao from "../Componentes/CardsColecao/CardsColecao";
 import Footer from "../Componentes/ConteudoFooter/Footer";
 import Header from "../Componentes/Header/Header";
 
+
 function Home() {
+
   return (
     <main className="relative w-full h-meio lg:h-screen animate-[fadeIn_1.3s_linear]">
       <Header />

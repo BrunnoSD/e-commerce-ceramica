@@ -5,7 +5,7 @@ import { CounterContext } from "../Funcoes/Buy.jsx";
 
 function CompHeader() {
   const [isOpen, setIsOpen] = useState(false);
-  const {adCarrinho} = useContext(CounterContext)
+  const {adCarrinho, toggleCheck} = useContext(CounterContext)
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -29,6 +29,7 @@ function CompHeader() {
               viewBox="0 0 197.7 166"
               preserveAspectRatio="xMinYMax meet"
               data-hook="svg-icon-2"
+              onClick={toggleCheck}
             >
               <path d="M197.9 55.9L169.9 127.4 64.5 127.4 27.6 29.8 0 29.8 0.2 16.7 36.5 16.7 73.4 114.3 160.9 114.3 183 55.9"></path>
               <circle cx="143.8" cy="153" r="13"></circle>

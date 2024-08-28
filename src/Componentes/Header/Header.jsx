@@ -1,4 +1,5 @@
 import CompHeader from "../CompHeader/CompHeader";
+import MenuCheckout from "../MenuCheckout/MenuCheckout.jsx";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import {
@@ -14,6 +15,7 @@ function Header() {
 
   return (
     <header className="bg-white">
+      <MenuCheckout />
       <nav className="lg:flex justify-between py-5 md:mx-10">
         <ul className="flex justify-evenly max-sm:text-sm md:gap-10">
           <li>

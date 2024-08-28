@@ -23,7 +23,7 @@ function MenuCheckout() {
 
 
   return (
-    <main className={`absolute right-0 w-80 lg:w-96 h-screen bg-white md:hidden ${abrirFechar ? "" : "hidden"}`}>
+    <main className={`absolute right-0 w-80 lg:w-96 h-screen bg-white ${abrirFechar ? "" : "hidden"}`}>
       <section className="w-full h-32 bg-black flex items-center justify-between">
         <p className="text-white text-2xl">
           <FontAwesomeIcon
